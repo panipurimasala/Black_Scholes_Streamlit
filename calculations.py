@@ -15,8 +15,8 @@ class Bschole_calc(object):
         d2 = d1 - self.vol * math.sqrt(self.ttm)
 
         if self.type == "Call":
-            return self.curr*(norm.cdf(d1)) - self.strike*math.exp(-1*self.rfr*self.ttm) * (norm.cdf(d2))
+            return float(self.curr*(norm.cdf(d1)) - self.strike*math.exp(-1*self.rfr*self.ttm) * (norm.cdf(d2)))
         elif self.type=='Put':
-            return self.strike*math.exp(-1*self.rfr*self.ttm) * (norm.cdf(-d2)) - self.curr*(norm.cdf(-d1))
+            return float(self.strike*math.exp(-1*self.rfr*self.ttm) * (norm.cdf(-d2)) - self.curr*(norm.cdf(-d1)))
         else:
             raise ValueError("Invalid option type. Use 'Call' or 'Put'.")
