@@ -5,7 +5,7 @@
 pandas == 1.4.0
 
 # D:\dev\streamlit-dcps-covid\web.py: 2,6
-plotly == 2.31.1
+plotly == 5.24.1
 
 # D:\dev\streamlit-dcps-covid\get_cases.py: 3
 python_dateutil == 2.8.2
