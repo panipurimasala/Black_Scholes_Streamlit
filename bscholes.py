@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import streamlit.components.v1 as components
 import plotly.express as px
 from calculations import Bschole_calc
@@ -121,7 +120,6 @@ for xx in range(len(ex)):
     for yy in range(len(why)):
         option = Bschole_calc(strike_price, why[yy], ttm, ex[xx], Rfir,type_for_heatmap)
         data[yy][xx] = float(round(option.__calc__(),2))
-        print(f"Data[{yy}][{xx}] = {data[yy][xx]}, Type: {type(data[yy][xx])}")
         if data[yy][xx] > maxx:
             maxx = data[yy][xx]
         if data[yy][xx]<minn:
@@ -130,8 +128,7 @@ for xx in range(len(ex)):
 # why = [str(yy) for yy in why]
 # color_scale = [[minn,"Red"], [maxx,"Green"]]
 fig_call = px.imshow(data, labels=dict(x="Volatility", y="Strike Price"), color_continuous_scale='Viridis', text_auto=True)
-# import numpy as np
-# img_rgb = np.array(data, dtype=np.uint8)
+
 # # Display the heatmap
 # fig = px.imshow(img_rgb)
 callmap.subheader("Call Heatmap")

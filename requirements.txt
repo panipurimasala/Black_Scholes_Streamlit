@@ -5,7 +5,7 @@
 pandas == 1.4.0
 
 # D:\dev\streamlit-dcps-covid\web.py: 2,6
-plotly == 2.32.0
+plotly == 2.31.1
 
 # D:\dev\streamlit-dcps-covid\get_cases.py: 3
 python_dateutil == 2.8.2
@@ -15,5 +15,3 @@ matplotlib == 3.8.0
 scipy == 1.11.4
 
 seaborn == 0.12.2
-
-numpy == 2.1.1
