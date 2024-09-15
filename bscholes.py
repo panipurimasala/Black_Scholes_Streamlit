@@ -130,7 +130,7 @@ for xx in range(len(ex)):
 # ex= [str(xx) for xx in ex]
 # why = [str(yy) for yy in why]
 # color_scale = [[minn,"Red"], [maxx,"Green"]]
-fig_call = px.imshow(data, labels=dict(x="Volatility", y="Strike Price"), color_continuous_scale='Viridis', text_auto=True)
+fig_call = px.imshow(data,dtype=np.uint8, labels=dict(x="Volatility", y="Strike Price"), color_continuous_scale='Viridis', text_auto=True)
 # import numpy as np
 # img_rgb = np.array(data, dtype=np.uint8)
 # # Display the heatmap
