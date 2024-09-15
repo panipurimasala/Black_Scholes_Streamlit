@@ -120,8 +120,6 @@ type_for_heatmap="Call"
 for xx in range(len(ex)):
     for yy in range(len(why)):
         option = Bschole_calc(strike_price, why[yy], ttm, ex[xx], Rfir,type_for_heatmap)
-        print(f"this the x:{ex[xx]} this the y:{why[yy]}")
-        print(f"This is the value:{data[yy][xx]}")
         data[yy][xx] = round(option.__calc__(),2)
         if data[yy][xx] > maxx:
             maxx = data[yy][xx]
@@ -130,7 +128,7 @@ for xx in range(len(ex)):
 # ex= [str(xx) for xx in ex]
 # why = [str(yy) for yy in why]
 # color_scale = [[minn,"Red"], [maxx,"Green"]]
-fig_call = px.imshow(data,dtype=np.uint8, labels=dict(x="Volatility", y="Strike Price"), color_continuous_scale='Viridis', text_auto=True)
+fig_call = px.imshow(data, labels=dict(x="Volatility", y="Strike Price"), color_continuous_scale='Viridis', text_auto=True)
 # import numpy as np
 # img_rgb = np.array(data, dtype=np.uint8)
 # # Display the heatmap
@@ -142,8 +140,6 @@ type_for_heatmapp="Put"
 for xx in range(len(ex)):
     for yy in range(len(why)):
         option = Bschole_calc(strike_price, why[yy], ttm, ex[xx], Rfir,type_for_heatmapp)
-        print(f"this the x:{ex[xx]} this the y:{why[yy]}")
-        print(f"This is the value:{data[yy][xx]}")
         data[yy][xx] = round(option.__calc__(),2)
         if data[yy][xx] > maxx:
             maxx = data[yy][xx]
