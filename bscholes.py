@@ -120,7 +120,7 @@ type_for_heatmap="Call"
 for xx in range(len(ex)):
     for yy in range(len(why)):
         option = Bschole_calc(strike_price, why[yy], ttm, ex[xx], Rfir,type_for_heatmap)
-        data[yy][xx] = round(option.__calc__(),2).astype(float)
+        data[yy][xx] = float(round(option.__calc__(),2))
         if data[yy][xx] > maxx:
             maxx = data[yy][xx]
         if data[yy][xx]<minn:
