@@ -121,6 +121,7 @@ for xx in range(len(ex)):
     for yy in range(len(why)):
         option = Bschole_calc(strike_price, why[yy], ttm, ex[xx], Rfir,type_for_heatmap)
         data[yy][xx] = float(round(option.__calc__(),2))
+        print(f"Data[{yy}][{xx}] = {data[yy][xx]}, Type: {type(data[yy][xx])}")
         if data[yy][xx] > maxx:
             maxx = data[yy][xx]
         if data[yy][xx]<minn:
