@@ -127,7 +127,7 @@ for xx in range(len(ex)):
 # ex= [str(xx) for xx in ex]
 # why = [str(yy) for yy in why]
 # color_scale = [[minn,"Red"], [maxx,"Green"]]
-fig_call = px.imshow(data, labels=dict(x="Volatility", y="Strike Price"), color_continuous_scale='Viridis', text_auto=True, key="graph_call")
+fig_call = px.imshow(data, labels=dict(x="Volatility", y="Strike Price"), color_continuous_scale='Viridis', text_auto=True)
 
 # # Display the heatmap
 # fig = px.imshow(img_rgb)
@@ -145,4 +145,4 @@ for xx in range(len(ex)):
             minn = data[yy][xx]
 putmap.subheader("Put Heatmap")
 fig_put = px.imshow(data, labels=dict(x="Volatility", y="Strike Price"), text_auto=True, color_continuous_scale='Viridis')
-putmap.plotly_chart(fig_put, use_container_width=True, key="graph_put")
+putmap.plotly_chart(fig_put, use_container_width=True)
