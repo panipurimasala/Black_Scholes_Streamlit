@@ -127,12 +127,12 @@ for xx in range(len(ex)):
 # ex= [str(xx) for xx in ex]
 # why = [str(yy) for yy in why]
 # color_scale = [[minn,"Red"], [maxx,"Green"]]
-fig_call = px.imshow(data, labels=dict(x="Volatility", y="Strike Price"), color_continuous_scale='Viridis', text_auto=True, key = "put")
+fig_call = px.imshow(data, labels=dict(x="Volatility", y="Strike Price"), color_continuous_scale='Viridis', text_auto=True)
 
 # # Display the heatmap
 # fig = px.imshow(img_rgb)
 callmap.subheader("Call Heatmap")
-callmap.plotly_chart(fig_call, use_container_width=True)
+callmap.plotly_chart(fig_call, use_container_width=True, key = "call")
 
 type_for_heatmapp="Put"
 for xx in range(len(ex)):
